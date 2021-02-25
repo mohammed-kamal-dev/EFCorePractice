@@ -19,8 +19,8 @@ namespace SomeUI
         private static readonly SamuraiContext _context = new SamuraiContext();
         static void Main(string[] args)
         {
-              
-            Console.WriteLine("End Debuging ...");
+
+
 
             //AddoneRecord();
 
@@ -33,7 +33,7 @@ namespace SomeUI
 
             //GetMultipleRecordsWithAllRelatedData();
             //GetMultipleRecordsWithRelateddatWithSpecficCondition();
-            
+
 
             //GetMultipleRecordsOrderbySpecficProperty();
             //GetMultipleRecordsOrderbySpecficRelatedDataProperty();
@@ -43,6 +43,8 @@ namespace SomeUI
             //ModifyOneRecord();
             //ModifyMultipleRecords();
             //ModifyOneRecordSpecficRelatedData();
+
+            Console.WriteLine("End Debuging ...");
 
             Console.ReadKey();
         }
