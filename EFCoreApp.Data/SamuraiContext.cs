@@ -18,7 +18,7 @@ namespace EFCoreApp.Data
         {
       
             optionsBuilder
-                .UseSqlServer("Server = ADMINRG-121NNNJ\\SQLEXPRESS;; Database = EFCoreAppData; Trusted_Connection = True; ")
+                .UseSqlServer("Server = (localdb)\\MSSQLLocalDB; Database = EFCoreAppData; Trusted_Connection = True; ")
                 .EnableSensitiveDataLogging(true);
         }
 
