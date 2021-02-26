@@ -38,6 +38,10 @@ namespace SomeUI
             //ModifyMultipleRecords();
             //ModifyOneRecordSpecficRelatedData();
 
+
+            //Getspecficnumberofrecordsfromtable();
+            //Skipspecficnumberofrecordsintable();
+
             Console.WriteLine("End Debuging ...");
 
             Console.ReadKey();
@@ -162,6 +166,17 @@ namespace SomeUI
 
             _context.SaveChanges();
         }
+
+        public static void Getspecficnumberofrecordsfromtable()
+        {
+            var samurais = _context.Samurais.Take(5).ToList();
+        }
+
+        public static void Skipspecficnumberofrecordsintable()
+        {
+            var samurais = _context.Samurais.Skip(3).ToList();
+        }
+
 
      
         #endregion
