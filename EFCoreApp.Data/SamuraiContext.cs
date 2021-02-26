@@ -28,6 +28,14 @@ namespace EFCoreApp.Data
             modelBuilder.Entity<SamuraiBattle>()
                 .HasKey(s => new { s.SamuraiId, s.BattleId });
 
+
+            // modelBuilder.Seed(); // Init Values 
+
+
+
+
+
+
             //Mapping nullable foreign key SamuraiId 
             //modelBuilder.Entity<Samurai>()
             //    .HasOne(s => s.SecretIdentity)
