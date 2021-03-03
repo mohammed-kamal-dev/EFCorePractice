@@ -28,12 +28,11 @@ namespace EFCoreApp.Data
             modelBuilder.Entity<SamuraiBattle>()
                 .HasKey(s => new { s.SamuraiId, s.BattleId });
 
-
+            //Seeding DataBase
             // modelBuilder.Seed(); // Init Values 
 
-
-
-
+            //Add Shadow Property
+            //modelBuilder.Entity<Samurai>().Property<DateTime>("LastAdded");
 
 
             //Mapping nullable foreign key SamuraiId 
