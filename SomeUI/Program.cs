@@ -20,7 +20,7 @@ namespace SomeUI
 
             //AddMultipleRecords(); 
 
-            GetOneRecord(); 
+            //GetOneRecord(); 
             //GetOneRecordWithSpecficCondition(); 
             //GetOneRecordWirhitRelatedData();
             //GetOneRecordWithRelatedDataWithspecficCondition();

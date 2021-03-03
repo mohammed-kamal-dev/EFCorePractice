@@ -25,14 +25,14 @@ namespace EFCoreApp.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
       
-           // optionsBuilder
-                //.UseSqlServer("Server = (localdb)\\MSSQLLocalDB; Database = EFCoreAppData; Trusted_Connection = True; ");
+            optionsBuilder
+                .UseSqlServer("Server = (localdb)\\ProjectsV13; Database = SamuraiAppData; Trusted_Connection = True; ")
 
-                optionsBuilder.UseSqlServer(
-                    "Server = ADMINRG-121NNNJ\\SQLEXPRESS; Database = EFCoreAppData; Trusted_Connection = True; ",
-                    b=> b.MinBatchSize(6)
+                //optionsBuilder.UseSqlServer(
+                //    "Server = ADMINRG-121NNNJ\\SQLEXPRESS; Database = EFCoreAppData; Trusted_Connection = True; ",
+                //    b=> b.MinBatchSize(6))
                         
-                )
+                
                     .UseLoggerFactory(MyConsoleLoggerFactory)
                     .EnableSensitiveDataLogging(true);
         }
