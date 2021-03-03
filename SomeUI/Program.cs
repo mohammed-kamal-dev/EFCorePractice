@@ -11,16 +11,16 @@ namespace SomeUI
     class Program 
     {
         private static readonly SamuraiContext _context = new SamuraiContext();
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
 
-
+            #region Debug EFCoreoperations
 
             //AddoneRecord();
 
             //AddMultipleRecords(); 
 
-            //GetOneRecord(); 
+            GetOneRecord(); 
             //GetOneRecordWithSpecficCondition(); 
             //GetOneRecordWirhitRelatedData();
             //GetOneRecordWithRelatedDataWithspecficCondition();
@@ -36,8 +36,16 @@ namespace SomeUI
 
             //ModifyOneRecord();
             //ModifyMultipleRecords();
-            //ModifyOneRecordSpecficRelatedData();
+            ModifyOneRecordSpecficRelatedData();
+            #endregion
 
+            #region DebugEFCore_Trainig_Path
+
+            
+
+            #endregion
+
+            Console.WriteLine(_context.ChangeTracker);
             Console.WriteLine("End Debuging ...");
 
             Console.ReadKey();
@@ -45,7 +53,7 @@ namespace SomeUI
 
 
         #region EFOperations
-
+         
         public static void AddoneRecord()
         {
             var samurai = new Samurai()
@@ -155,10 +163,12 @@ namespace SomeUI
 
         public static void ModifyOneRecordSpecficRelatedData()
         {
-            var qoutes = _context.Quotes.Where(s => s.SamuraiId == 3).ToList();
+            var qoutes = _context.Quotes.Include(q => q.Samurai).ToList();
 
-            var oneQuote = qoutes.SingleOrDefault(s => s.Text.StartsWith("He"));
-            oneQuote.Text = "Yes You Can";
+            var samuriaQuotes = qoutes.Where(s => s.SamuraiId == 3).ToList();
+
+            var oneQuote = samuriaQuotes.SingleOrDefault(s => s.Text.StartsWith("Y"));
+            oneQuote.Text = "You Can Do it";
 
             _context.SaveChanges();
         }
