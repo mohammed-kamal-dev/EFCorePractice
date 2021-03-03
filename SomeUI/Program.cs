@@ -36,7 +36,7 @@ namespace SomeUI
 
             //ModifyOneRecord();
             //ModifyMultipleRecords();
-            ModifyOneRecordSpecficRelatedData();
+           // ModifyOneRecordSpecficRelatedData();
             #endregion
 
             #region DebugEFCore_Trainig_Path
